@@ -1,6 +1,8 @@
 body{
     min-width: 100vw;
     min-height: 100vh;
+    background: lightblue url("./assets/dallas-skyline.jpg") no-repeat fixed center;
+    background-size: cover;
 }
 header{
     display: flex;
@@ -8,9 +10,53 @@ header{
     align-items: center;
     justify-content: center;
 }
+/* .blur{
+    filter: blur(13px);
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+} */
 .cityInfo{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
+    padding: 0 50px;
+    /* border-top: 2px solid rgba(255, 255, 255, .5);
+    border-bottom: 2px solid rgba(255, 255, 255, .5);
+    height: 500px;
+    width: 100%;
+    overflow: hidden; */
+}
+h2{
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+.data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid lightgray;
+    height: 400px;
+    width: 100%;
+    box-shadow: lightgray 1px 5px 7px;
+    background-color: transparent;
+    backdrop-filter: blur(6px);
+    border-radius:10px;
+    z-index:10;
+    background-color: rgba(168, 235, 255, 0.2);
+    margin: 50px 10px;
+}
+.temperature{
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+}
+.condition{
+    text-transform: uppercase;
 }
