@@ -5,9 +5,10 @@ import "./App.css";
 
 
 function App() {
+  const [cityData, setCityData] = useState([])
 
   useEffect(() => {
-    //Major City Zip Codes
+    //Major City Zip Codes for Austin, Houston, and Dallas
     const cityZips = [78759, 77005, 75201];
 
     //Get API Data
@@ -27,7 +28,7 @@ function App() {
                 return data.data
               });
               console.log(weatherData);
-              // setUserInfo(userData)
+              setCityData(weatherData)
       })
       );
         } catch (error){
@@ -46,9 +47,15 @@ function App() {
         <h1>Texas Major Cities Weather App</h1>
       </header>
       <div className="cityInfo">
-          <City />
-          <City />
-          <City />
+        {cityData.map((data, index) => {
+          return <City 
+          key={index}
+          city={data.name}
+          temp={data.main.temp}
+          weatherCondition ={data.weather[0].description}
+          />
+        }
+        )}
       </div>
     </div>
   );

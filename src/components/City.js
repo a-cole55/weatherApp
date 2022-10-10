@@ -1,11 +1,11 @@
 import React from 'react'
 
-function City() {
+function City(props) {
   return (
     <div>
-        <h2>Name of City</h2>
-        <span>Temp</span>
-        <span>Cloudy, Sunny, etc</span>
+        <h2>{props.city}</h2>
+        <span>{props.temp}</span>
+        <span>{props.weatherCondition}</span>
     </div>
   )
 }
