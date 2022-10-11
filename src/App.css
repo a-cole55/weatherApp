@@ -63,9 +63,6 @@ h2{
     margin-bottom: 10px;
     font-weight: 500;
 }
-#bt{
-    background-color: aquamarine;
-}
 #contained-modal-title-vcenter{
     padding: 0 100px;
 }
@@ -75,4 +72,23 @@ h2{
     align-items: center;
     justify-content: center;
 }
-  
+
+@media screen and (max-width:480px){
+h1{
+    font-size: 24px;
+}
+#header2{
+    font-size: 20px;
+}
+.cityInfo{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+.data{
+    margin: 10px 0;
+}
+#contained-modal-title-vcenter{
+    padding: 0 170px;
+}
+}
