@@ -48,14 +48,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Everything's Bigger in Texas</h1>
-        <h2>Major Cities Weather App</h2>
+        <span id="header2">Major Cities Weather App</span>
       </header>
       <div className="cityInfo">
         {cityData.map((data, index) => {
           return <City 
           key={index}
           city={data.name}
-          temp={data.main.temp}
+          temp={Math.round(data.main.temp)}
           weatherCondition ={data.weather[0].description}
           pressure={data.main.pressure}
           humidity={data.main.humidity}

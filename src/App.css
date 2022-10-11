@@ -4,6 +4,7 @@ body{
     min-height: 100vh;
     background: lightblue url("./assets/dallas-skyline.jpg") no-repeat fixed center;
     background-size: cover;
+    font-family: 'Inter Tight', sans-serif;
 }
 header{
     display: flex;
@@ -11,17 +12,29 @@ header{
     align-items: center;
     justify-content: center;
 }
+.App{
+    padding:3% 5%;
+}
+h1{
+    text-transform: uppercase;
+    font-weight: 700;
+    word-spacing: 0.1em;
+}
+#header2{
+    font-size: 24px;
+}
 
 .cityInfo{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
-    padding: 0 50px;
 }
 h2{
     text-transform: uppercase;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+    font-size: 24px;
 }
 .data{
     display: flex;
@@ -42,10 +55,24 @@ h2{
 }
 .temperature{
     display: block;
-    font-weight: bold;
-    font-size: 30px;
+    font-weight: 500;
+    font-size: 40px;
 }
 .condition{
     text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+#bt{
+    background-color: aquamarine;
+}
+#contained-modal-title-vcenter{
+    padding: 0 100px;
+}
+#details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
   

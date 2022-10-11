@@ -5,22 +5,22 @@ function VerticalModal(props) {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="sm"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title id="contained-modal-title-vcenter">
           {props.city}
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        <h4>{props.temp}</h4>
-        <h6>Atmospheric pressure:</h6>
-        <span>{props.pressure}hPa</span>
-        <h6>Humidity:</h6>
+      <Modal.Body id="details">
+        <h4>{props.temp}&deg;F</h4>
+        <span><strong>Atmospheric Pressure:</strong></span>
+        <span>{props.pressure} hPa</span>
+        <span><strong>Humidity:</strong></span>
         <span>{props.humidity}%</span>
-        <h6>Visibility:</h6>
+        <span><strong>Visibility:</strong></span>
         <span>{props.visibility} m</span>
       </Modal.Body>
       <Modal.Footer>

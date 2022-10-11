@@ -20,7 +20,8 @@ function City(props) {
         More Info
       </Button>
 
-      <VerticalModal
+      <VerticalModal 
+        id="bg"
         show={modalShow}
         onHide={() => setModalShow(false)}
         city={props.city}
