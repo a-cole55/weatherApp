@@ -4,7 +4,6 @@ import VerticalModal from "./Modal";
 
 
 function City(props) {
-  // const [openModal, setOpenModal] = useState(false);
   const [modalShow, setModalShow] = useState(false);
 
 
