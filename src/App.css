@@ -19,6 +19,7 @@ h1{
     text-transform: uppercase;
     font-weight: 700;
     word-spacing: 0.1em;
+    text-align: center;
 }
 #header2{
     font-size: 24px;
