@@ -25,7 +25,7 @@ function City(props) {
         onHide={() => setModalShow(false)}
         city={props.city}
         temp={props.temp}
-        weatherCondition={props.weatherCondition}
+        weathercondition={props.weatherCondition}
         desc ={props.desc}
         pressure={props.pressure}
         humidity={props.humidity}
