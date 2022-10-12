@@ -37,13 +37,17 @@ h2{
     font-weight: 700;
     font-size: 24px;
 }
+h5{
+    text-transform: capitalize;
+    font-size: 18px;
+}
 .data{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 2px solid rgba(0,0,0,0.2);
-    height: 200px;
+    height: 250px;
     width: 100%;
     box-shadow: rgba(0,0,0,0.5) 1px 5px 7px;
     background-color: transparent;
@@ -52,6 +56,7 @@ h2{
     z-index:1;
     background-color: rgba(255, 255, 255, 0.3);
     margin: 50px 10px;
+    padding:5%;
 
 }
 .temperature{
@@ -61,6 +66,7 @@ h2{
 }
 .condition{
     text-transform: uppercase;
+    font-size: 20px;
     margin-bottom: 10px;
     font-weight: 500;
 }

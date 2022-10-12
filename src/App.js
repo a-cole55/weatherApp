@@ -56,7 +56,8 @@ function App() {
           key={index}
           city={data.name}
           temp={Math.round(data.main.temp)}
-          weatherCondition ={data.weather[0].description}
+          weatherCondition={data.weather[0].main}
+          desc ={data.weather[0].description}
           pressure={data.main.pressure}
           humidity={data.main.humidity}
           visibility={data.visibility}

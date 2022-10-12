@@ -16,6 +16,7 @@ function VerticalModal(props) {
       </Modal.Header>
       <Modal.Body id="details">
         <h4>{props.temp}&deg;F</h4>
+        <h5>{props.desc}</h5>
         <span><strong>Atmospheric Pressure:</strong></span>
         <span>{props.pressure} hPa</span>
         <span><strong>Humidity:</strong></span>
