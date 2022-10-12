@@ -1,3 +1,20 @@
+Texas Major City Weather Application
+
+This is a simple web application that allows users to view weather information for 3 of Texas' major cities: Austin, Dallas, and Houston. This application uses the  OpenWeatherMap’s API to generate real-time weather information. 
+Link to project: https://1f4s6c-3000.preview.csb.app/
+
+![WeatherApp](https://user-images.githubusercontent.com/94746691/195384175-104ee332-ec15-488d-8800-72ed4f39e1f7.jpg)
+
+
+How It's Made: Tech used: React, OpenWeatherMap's API, and Bootstrap (for the modal)
+
+Optimizations: I would like to add a search component to this web application to allow users to view weather information for the city of their choice and then display all applicable data. With more time, it would be awesome to add a feature that allows the user to pin or "favorite" the cities of their choice to the web page as well so that they can view the weather data easier.
+
+Lessons Learned: This is my second time using Promise.all ever. Promise.all is a great method for making multiple API requests concurrently. Since JavaScript is synchronous by nature, Promise.all helps with asynchronous operations. One of the benefits of Promise.all is that it simplifies code and resolves only if ALL promises resolve, otherwise it will be rejected. 
+One of the resources used to understand Promise.all was: https://blog.logrocket.com/understanding-promise-all-in-javascript/.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
