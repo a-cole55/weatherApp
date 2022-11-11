@@ -64,8 +64,11 @@ function App() {
             visibility={data.value.data.visibility}
             />
           }else{
-            return <City 
-            city="Sorry this data is unavailable at this time. Please try again later." /> 
+            return (
+              <div className='data'>
+                  <h2>Sorry this data is unavailable at this time. Please try again later.</h2>
+              </div>
+            )
           }
           
         }
