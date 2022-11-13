@@ -12,6 +12,7 @@ function App() {
   useEffect(() => {
     //Major City Zip Codes for Austin, Dallas, and Houston
     const cityZips = [78759, 75000, 77005];
+    //75201 === Dallas
 
     //Get API Data
     const getWeatherData = async () =>{
