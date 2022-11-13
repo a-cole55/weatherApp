@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     //Major City Zip Codes for Austin, Dallas, and Houston
-    const cityZips = [78759, 75201, 77005];
+    const cityZips = [78759, 75000, 77005];
 
     //Get API Data
     const getWeatherData = async () =>{
@@ -22,17 +22,16 @@ function App() {
           });
 
           //Fetch API data for each city
-          const getWeatherData = await Promise.all(cityZipURL.map((url) => axios.get(url)))
-            .then(
-              axios.spread((...allData) => {
-              // console.log({ allData });
-              let weatherData = allData.map((data) =>{
-                return data.data
-              });
-              console.log(weatherData);
-              setCityData(weatherData)
-      })
-      );
+          const getWeather= await cityZipURL.map((url) => axios.get(url));
+          console.log(getWeather);
+
+          
+          Promise.allSettled(getWeather)
+            .then((result) => {
+              console.log(result)
+              setCityData(result);
+            }
+          )
         } catch (error){
         console.log(error)
       }
@@ -52,16 +51,22 @@ function App() {
       </header>
       <div className="cityInfo">
         {cityData.map((data, index) => {
-          return <City 
-          key={index}
-          city={data.name}
-          temp={Math.round(data.main.temp)}
-          weatherCondition={data.weather[0].main}
-          desc ={data.weather[0].description}
-          pressure={data.main.pressure}
-          humidity={data.main.humidity}
-          visibility={data.visibility}
-          />
+          if(data.status === "fulfilled"){
+            return <City 
+            key={index}
+            city={data.value.data.name}
+            temp={Math.round(data.value.data.main.temp)}
+            weatherCondition={data.value.data.weather[0].main}
+            desc ={data.value.data.weather[0].description}
+            pressure={data.value.data.main.pressure}
+            humidity={data.value.data.main.humidity}
+            visibility={data.value.data.visibility}
+            />
+          }else{
+            return <City 
+            city="Sorry this data is unavailable at this time. Please try again later." /> 
+          }
+          
         }
         )}
       </div>
